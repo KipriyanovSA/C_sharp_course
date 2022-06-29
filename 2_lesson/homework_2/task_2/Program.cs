@@ -1,5 +1,4 @@
-﻿
-void FirstNum(int num)
+﻿void FirstNum(int num)
 {
     int num1 = num / 100;
     int num2 = num % 10;
