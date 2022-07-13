@@ -10,4 +10,4 @@ double ProdNum(int a, int b)
     return c;
 }
 Console.WriteLine(ProdNum(2, 4));
-Console.WriteLine(ProdNum(4, 9));
+Console.WriteLine(ProdNum(4, 4));
