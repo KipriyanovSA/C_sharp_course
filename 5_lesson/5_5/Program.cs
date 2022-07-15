@@ -31,11 +31,12 @@ int[] SecondArr(int[] arr)
     for (int i = 0; i < size / 2; i++)
         new_arr[i] = arr[i] * arr[size - i - 1];
 
-    new_arr[flex_size - 1] = arr[flex_size - 1];
+    if (new_arr[flex_size - 1] == 0)
+        new_arr[flex_size - 1] = arr[flex_size - 1];
     return new_arr;
 }
 
-int[] arr_1 = NewArray(7);
+int[] arr_1 = NewArray(6);
 Print(arr_1);
 int[] arr_1_new = SecondArr(arr_1);
 Print(arr_1_new);
