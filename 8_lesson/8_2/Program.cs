@@ -44,7 +44,7 @@ string ReplaceRows(int[,] arr)
             (arr[i, j], arr[j, i]) = (arr[j, i], arr[i, j]);
         }
     }
-    return "Новый массив";
+    return "Обновленный массив";
 }
 
 Console.Write("Введите количество строк: ");
