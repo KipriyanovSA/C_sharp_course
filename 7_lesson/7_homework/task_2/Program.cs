@@ -43,13 +43,13 @@ void FindNum(int[,] array, int row1, int column1)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            if (row1 > array.GetLength(0) || column1 > array.GetLength(1))
-            Console.WriteLine("Такого элемента нет");
-                if (array[i, j] == array[row1 - 1, column1 - 1])
-                {
-                    Console.WriteLine(array[i, j]);
-                    return;
-                }
+            if (row1 > array.GetLength(0) || row1 == 0 || column1 > array.GetLength(1) || column1 == 0)
+                Console.WriteLine("Такого элемента нет");
+            if (array[i, j] == array[row1 - 1, column1 - 1])
+            {
+                Console.WriteLine(array[i, j]);
+                return;
+            }
         }
     }
 }
