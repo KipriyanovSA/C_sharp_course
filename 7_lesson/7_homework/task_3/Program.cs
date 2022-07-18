@@ -29,8 +29,31 @@ int[,] FillArray(int row, int column)
     {
         for (int j = 0; j < column; j++)
         {
-            arr[i, j] = new Random().Next(1, 11);
+            arr[i, j] = new Random().Next(1,10);
         }
     }
     return arr;
 }
+
+void MiddleOfColumns(int[,] arr)
+{
+    int row = arr.GetLength(0);
+    int column = arr.GetLength(1);
+    double result;
+
+    for (int i = 0; i < column; i++)
+    {
+        result = 0;
+        for (int j = 0; j < row; j++) result += arr[j, i];
+        Console.Write($"{Math.Round(result / row, 2)}; ");
+    }
+}
+
+Console.Write("Введите количество строк: ");
+int row = int.Parse(Console.ReadLine());
+Console.Write("Введите количество столбцов: ");
+int column = int.Parse(Console.ReadLine());
+int[,] arr_1 = FillArray(row, column);
+Print(arr_1);
+Console.WriteLine();
+MiddleOfColumns(arr_1);
